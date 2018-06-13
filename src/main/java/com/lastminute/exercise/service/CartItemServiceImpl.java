@@ -51,7 +51,7 @@ public class CartItemServiceImpl implements CartItemService {
 	item.setProduct(product);
 	item.setQuantity(quantity);
 	item.setTotalTaxes(totalTaxes);
-	item.setTotal(total);
+	item.setTotal(totalTaxed);
 	
 	return item;
     }

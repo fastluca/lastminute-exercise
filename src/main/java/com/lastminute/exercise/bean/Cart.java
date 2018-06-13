@@ -18,10 +18,30 @@ import lombok.Setter;
 @Setter
 public class Cart {
     
-    private Map<String, CartItem> items = new HashMap<>();
+    private Map<String, CartItem> items;
     
     private BigDecimal totalTaxes;
     
     private BigDecimal total;
+    
+    /**
+     * 
+     */
+    public Cart() {
+	this(new HashMap<>(), BigDecimal.ZERO, BigDecimal.ZERO);
+    }
+
+    /**
+     * @param items
+     * @param totalTaxes
+     * @param total
+     */
+    public Cart(Map<String, CartItem> items, BigDecimal totalTaxes, BigDecimal total) {
+	this.items = items;
+	this.totalTaxes = totalTaxes;
+	this.total = total;
+    }
+    
+    
 
 }

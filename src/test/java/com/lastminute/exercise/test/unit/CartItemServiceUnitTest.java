@@ -109,9 +109,9 @@ public class CartItemServiceUnitTest {
 	assertThat(item.getTotalTaxes()).as("Must have total taxes: " + taxes).isEqualByComparingTo(taxes);
 
 	// test quantity=1, productType=OTHERS
-	amount = new BigDecimal("14.99");
+	amount = new BigDecimal("16.49");
 	taxes = new BigDecimal("1.5");
-	product.setAmount(amount);
+	product.setAmount(amount.subtract(taxes));
 	product.setType(ProductType.OTHERS);
 	item = service.createCartItem(product, BigInteger.ONE);
 	assertThat(item).as("Must be not null").isNotNull();
@@ -120,23 +120,11 @@ public class CartItemServiceUnitTest {
 	assertThat(item.getTotal()).as("Must have total amount: " + amount).isEqualTo(amount);
 	assertThat(item.getTotalTaxes()).as("Must have total taxes: " + taxes).isEqualByComparingTo(taxes);
 
-	// test quantity=2, productType=OTHERS
-	amount = new BigDecimal("14.99");
-	taxes = new BigDecimal("3");
-	product.setAmount(amount);
-	product.setType(ProductType.OTHERS);
-	item = service.createCartItem(product, BigInteger.valueOf(2));
-	assertThat(item).as("Must be not null").isNotNull();
-	assertThat(item.getProduct()).as("Must contains the product").isEqualTo(product);
-	assertThat(item.getQuantity()).as("Must have one quantity").isEqualTo(BigInteger.valueOf(2));
-	assertThat(item.getTotal()).as("Must have total amount: " + amount)
-		.isEqualTo(amount.multiply(BigDecimal.valueOf(2)));
-	assertThat(item.getTotalTaxes()).as("Must have total taxes: " + taxes).isEqualByComparingTo(taxes);
 
 	// test quantity=1, productType=OTHERS, imported=true
-	amount = new BigDecimal("27.99");
+	amount = new BigDecimal("32.19");
 	taxes = new BigDecimal("4.2");
-	product.setAmount(amount);
+	product.setAmount(amount.subtract(taxes));
 	product.setType(ProductType.OTHERS);
 	product.setImported(true);
 	item = service.createCartItem(product, BigInteger.ONE);
