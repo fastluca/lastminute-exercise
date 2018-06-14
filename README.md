@@ -1,6 +1,6 @@
 # lastminute-exercise
 **Continuous Integration:** [![Build Status](https://travis-ci.org/fastluca/lastminute-exercise.svg?branch=master)](https://travis-ci.org/fastluca/lastminute-exercise)   
-**Test coverage:** [![Coverage Status](https://coveralls.io/repos/github/fastluca/lastminute-exercise/badge.svg?branch=master)](https://coveralls.io/github/fastluca/lastminute-exercise?branch=master)   
+**Test coverage:** [![Coverage Status](https://sonarcloud.io/api/project_badges/measure?project=com.lastminute%3Aexercise&metric=coverage)](https://sonarcloud.io/api/project_badges/measure?project=com.lastminute%3Aexercise&metric=coverage)   
 **Code Quality:** 
 [![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=com.lastminute%3Aexercise&metric=alert_status)](https://sonarcloud.io/api/project_badges/measure?project=com.lastminute%3Aexercise&metric=alert_status)   
 

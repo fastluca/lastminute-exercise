@@ -48,8 +48,6 @@ public class MainViewController implements Initializable {
 
     private static final Pattern PATTERN_INTEGER = Pattern.compile("\\d*");
 
-    private static final String FORMAT_AMOUNT = "#0.##";
-
     private Cart cart;
 
     @Inject
@@ -131,8 +129,8 @@ public class MainViewController implements Initializable {
      */
     private void updateView() {
 	this.cartTableView.getItems().setAll(this.cart.getItems().values());
-	    this.cartTotalLabel.setText(Utility.format(this.cart.getTotal(), FORMAT_AMOUNT));
-	    this.cartSalesTaxesLabel.setText(Utility.format(this.cart.getTotalTaxes(), FORMAT_AMOUNT));
+	    this.cartTotalLabel.setText(Utility.format(this.cart.getTotal(), Constants.FORMAT_AMOUNT));
+	    this.cartSalesTaxesLabel.setText(Utility.format(this.cart.getTotalTaxes(), Constants.FORMAT_AMOUNT));
     }
     
     private void clearProductDetails() {
