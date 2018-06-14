@@ -13,6 +13,8 @@
 
 		<maven.compiler.source>${java.version}</maven.compiler.source>
 		<maven.compiler.target>${java.version}</maven.compiler.target>
+		
+		<project.build.sourceEncoding>Cp1252</project.build.sourceEncoding>
 
 		<slf4j.version>1.7.25</slf4j.version>
 	</properties>
@@ -27,6 +29,24 @@
 					<vendor>Lastminute.com</vendor>
 					<mainClass>com.lastminute.exercise.StartApplication</mainClass>
 				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.eluder.coveralls</groupId>
+				<artifactId>coveralls-maven-plugin</artifactId>
+				<version>4.3.0</version>
+			</plugin>
+			<plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<version>0.7.6.201602180812</version>
+				<executions>
+					<execution>
+						<id>prepare-agent</id>
+						<goals>
+							<goal>prepare-agent</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>
