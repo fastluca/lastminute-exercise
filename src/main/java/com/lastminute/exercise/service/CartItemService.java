@@ -9,7 +9,9 @@ import com.lastminute.exercise.bean.CartItem;
 import com.lastminute.exercise.bean.Product;
 
 /**
- * @author Gianluca Colaianni -- Fincons Group S.p.A.
+ * The service responsible to manage operations about {@link CartItem} objects.
+ * 
+ * @author Gianluca Colaianni
  *
  */
 public interface CartItemService {

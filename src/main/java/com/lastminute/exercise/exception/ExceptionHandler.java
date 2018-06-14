@@ -12,6 +12,8 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 
 /**
+ * It is a centralized Exception handler responsible to intercept and manage all exceptions.
+ * 
  * @author Gianluca Colaianni
  *
  */

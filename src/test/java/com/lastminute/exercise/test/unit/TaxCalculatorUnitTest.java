@@ -12,11 +12,11 @@ import org.junit.Test;
 
 import com.google.inject.Guice;
 import com.google.inject.Injector;
-import com.lastminute.exercise.injection.CarModule;
+import com.lastminute.exercise.injection.CartModule;
 import com.lastminute.exercise.service.TaxCalculator;
 
 /**
- * @author Gianluca Colaianni -- Fincons Group S.p.A.
+ * @author Gianluca Colaianni
  *
  */
 public class TaxCalculatorUnitTest {
@@ -25,7 +25,7 @@ public class TaxCalculatorUnitTest {
 
     @BeforeClass
     public static void setUp() {
-	injector = Guice.createInjector(new CarModule()); 
+	injector = Guice.createInjector(new CartModule()); 
     }
     
     @Test

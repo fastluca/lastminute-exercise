@@ -4,7 +4,9 @@
 package com.lastminute.exercise.bean;
 
 /**
- * @author Gianluca Colaianni -- Fincons Group S.p.A.
+ * It lists the available product types.
+ * 
+ * @author Gianluca Colaianni
  *
  */
 public enum ProductType {

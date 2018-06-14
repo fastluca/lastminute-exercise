@@ -6,7 +6,9 @@ package com.lastminute.exercise.service;
 import java.math.BigDecimal;
 
 /**
- * @author Gianluca Colaianni -- Fincons Group S.p.A.
+ * The service responsible to calculate taxes.
+ * 
+ * @author Gianluca Colaianni
  *
  */
 public interface TaxCalculator {

@@ -39,17 +39,32 @@ import javafx.scene.control.TextFormatter;
 import javafx.scene.control.TextFormatter.Change;
 
 /**
- * @author Gianluca Colaianni -- Fincons Group S.p.A.
+ * The Controller for the main view. </br>
+ * It is responsible to manage the user input and to use the business logic module.
+ * 
+ * @author Gianluca Colaianni
  *
  */
 public class MainViewController implements Initializable {
 
+    /*
+     * Pattern that matches a valid amount.
+     */
     private static final Pattern PATTERN_AMOUNT = Pattern.compile("^\\d*(.\\d{0,2})?$");
 
+    /*
+     * Pattern that matches a valid integer.
+     */
     private static final Pattern PATTERN_INTEGER = Pattern.compile("\\d*");
 
+    /*
+     * The current cart.
+     */
     private Cart cart;
 
+    /*
+     * The business logic service.
+     */
     @Inject
     private CartService cartService;
 
@@ -110,7 +125,7 @@ public class MainViewController implements Initializable {
     /**
      * Create a product object from the view input.
      * @return a {@link Product} instance.
-     * @author Gianluca Colaianni -- Fincons Group S.p.A.
+     * @author Gianluca Colaianni
      */
     private Product getProduct() {
 	BigDecimal amount = BigDecimal.ZERO;
@@ -125,7 +140,7 @@ public class MainViewController implements Initializable {
     
     /**
      * Update displayed informations.
-     * @author Gianluca Colaianni -- Fincons Group S.p.A.
+     * @author Gianluca Colaianni
      */
     private void updateView() {
 	this.cartTableView.getItems().setAll(this.cart.getItems().values());
@@ -133,6 +148,11 @@ public class MainViewController implements Initializable {
 	    this.cartSalesTaxesLabel.setText(Utility.format(this.cart.getTotalTaxes(), Constants.FORMAT_AMOUNT));
     }
     
+    /**
+     * Clean the product detail informations.
+     * 
+     * @author Gianluca Colaianni
+     */
     private void clearProductDetails() {
 	this.productAmountTextField.clear();
 	this.productIdTextField.clear();
@@ -142,6 +162,11 @@ public class MainViewController implements Initializable {
 	this.productImportedCheckBox.setSelected(false);
     }
 
+    /**
+     * It is responsible to manage button initialization logic.
+     * 
+     * @author Gianluca Colaianni
+     */
     private void initializeButtons() {
 
 	/*
@@ -219,6 +244,10 @@ public class MainViewController implements Initializable {
 	
     }
 
+    /**
+     * It is responsible to initialize the table view.
+     * @author Gianluca Colaianni
+     */
     private void initializeTable() {
 	this.itemQuantityTableColumn
 		.setCellValueFactory(cellData -> new ReadOnlyObjectWrapper<>(cellData.getValue().getQuantity()));

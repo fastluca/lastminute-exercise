@@ -17,11 +17,11 @@ import com.google.inject.Injector;
 import com.lastminute.exercise.bean.CartItem;
 import com.lastminute.exercise.bean.Product;
 import com.lastminute.exercise.bean.ProductType;
-import com.lastminute.exercise.injection.CarModule;
+import com.lastminute.exercise.injection.CartModule;
 import com.lastminute.exercise.service.CartItemService;
 
 /**
- * @author Gianluca Colaianni -- Fincons Group S.p.A.
+ * @author Gianluca Colaianni
  *
  */
 public class CartItemServiceUnitTest {
@@ -30,7 +30,7 @@ public class CartItemServiceUnitTest {
 
     @BeforeClass
     public static void setUp() {
-	injector = Guice.createInjector(new CarModule());
+	injector = Guice.createInjector(new CartModule());
     }
 
     @Test

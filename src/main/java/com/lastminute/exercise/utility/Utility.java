@@ -8,7 +8,9 @@ import java.util.Map;
 import java.util.Objects;
 
 /**
- * @author Gianluca Colaianni -- Fincons Group S.p.A.
+ * An utility class to manage {@link Number} formatting. </br>
+ * The class is a {@code Singleton} with lazy initialization.
+ * @author Gianluca Colaianni
  *
  */
 public class Utility {
@@ -23,7 +25,7 @@ public class Utility {
      * @param number the number to represent.
      * @param pattern the forat to use.
      * @return
-     * @author Gianluca Colaianni -- Fincons Group S.p.A.
+     * @author Gianluca Colaianni
      */
     public static String format(final Number number, final String pattern) {
 	Objects.requireNonNull(number, "Number must be different from null.");

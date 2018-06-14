@@ -12,7 +12,7 @@ import org.junit.Test;
 import com.lastminute.exercise.utility.ResourceBundleHelper;
 
 /**
- * @author Gianluca Colaianni -- Fincons Group S.p.A.
+ * @author Gianluca Colaianni
  *
  */
 public class ResourceBundleUnitTest {

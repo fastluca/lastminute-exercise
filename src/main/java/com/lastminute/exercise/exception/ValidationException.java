@@ -4,6 +4,8 @@
 package com.lastminute.exercise.exception;
 
 /**
+ * This exception is intended to propagate validation errors from UX.
+ * 
  * @author Gianluca Colaianni
  *
  */

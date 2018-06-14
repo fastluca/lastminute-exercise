@@ -12,7 +12,9 @@ import com.lastminute.exercise.bean.CartItem;
 import com.lastminute.exercise.bean.Product;
 
 /**
- * @author Gianluca Colaianni -- Fincons Group S.p.A.
+ * Implementation of {@link CartService}.
+ * 
+ * @author Gianluca Colaianni
  *
  */
 public class CartServiceImpl implements CartService {
@@ -116,11 +118,11 @@ public class CartServiceImpl implements CartService {
     }
     
     /**
-     * Validates the objects, which are required to be different from {@code null}.
+     * It validates the objects, which are required to be different from {@code null}.
      * @param cart
      * @param product
      * @param quantity
-     * @author Gianluca Colaianni -- Fincons Group S.p.A.
+     * @author Gianluca Colaianni
      */
     private void validate(final Cart cart, final Product product, final BigInteger quantity) {
 	Objects.requireNonNull(cart, "Cart object required");

@@ -9,7 +9,7 @@ import java.util.ResourceBundle;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 import com.lastminute.exercise.exception.ExceptionHandler;
-import com.lastminute.exercise.injection.CarModule;
+import com.lastminute.exercise.injection.CartModule;
 import com.lastminute.exercise.utility.ResourceBundleHelper;
 
 import javafx.application.Application;
@@ -19,7 +19,9 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 /**
- * @author Gianluca Colaianni -- Fincons Group S.p.A.
+ * This class is responsible to start the JavaFX application.
+ * 
+ * @author Gianluca Colaianni
  *
  */
 public final class StartApplication extends Application {
@@ -35,7 +37,7 @@ public final class StartApplication extends Application {
 	 */
 	ExceptionHandler.initialize();
 	
-	final Injector injector = Guice.createInjector(new CarModule());
+	final Injector injector = Guice.createInjector(new CartModule());
 	
 	setUserAgentStylesheet(STYLESHEET_CASPIAN);
 	

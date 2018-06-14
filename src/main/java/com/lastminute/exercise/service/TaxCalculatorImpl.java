@@ -8,7 +8,9 @@ import java.math.RoundingMode;
 import java.util.Objects;
 
 /**
- * @author Gianluca Colaianni -- Fincons Group S.p.A.
+ * Implementation of {@link TaxCalculator} service.
+ * 
+ * @author Gianluca Colaianni
  *
  */
 public class TaxCalculatorImpl implements TaxCalculator {

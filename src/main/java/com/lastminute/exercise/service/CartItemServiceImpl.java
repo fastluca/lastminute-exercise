@@ -13,7 +13,9 @@ import com.lastminute.exercise.bean.Product;
 import com.lastminute.exercise.bean.ProductType;
 
 /**
- * @author Gianluca Colaianni -- Fincons Group S.p.A.
+ * Implementation of {@link CartItemService}.
+ * 
+ * @author Gianluca Colaianni
  *
  */
 public class CartItemServiceImpl implements CartItemService {

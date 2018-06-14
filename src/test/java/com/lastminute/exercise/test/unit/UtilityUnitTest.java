@@ -14,7 +14,7 @@ import com.lastminute.exercise.utility.Constants;
 import com.lastminute.exercise.utility.Utility;
 
 /**
- * @author Gianluca Colaianni -- Fincons Group S.p.A.
+ * @author Gianluca Colaianni
  *
  */
 public class UtilityUnitTest {

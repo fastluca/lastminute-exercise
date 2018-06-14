@@ -11,17 +11,28 @@ import lombok.Getter;
 import lombok.Setter;
 
 /**
- * @author Gianluca Colaianni -- Fincons Group S.p.A.
+ * The model class for a cart object.
+ * 
+ * @author Gianluca Colaianni
  *
  */
 @Getter
 @Setter
 public class Cart {
     
+   /*
+    * The items in the cart. The key is the product identifier.
+    */
     private Map<String, CartItem> items;
     
+    /*
+     * Total sales taxes.
+     */
     private BigDecimal totalTaxes;
     
+    /*
+     * Total amount
+     */
     private BigDecimal total;
     
     /**

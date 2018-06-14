@@ -4,6 +4,8 @@
 package com.lastminute.exercise.exception;
 
 /**
+ * Wrapper for all managed exceptions.
+ * 
  * @author Gianluca Colaianni
  *
  */

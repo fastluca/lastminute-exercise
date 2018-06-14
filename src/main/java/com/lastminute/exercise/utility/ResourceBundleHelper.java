@@ -8,6 +8,8 @@ import java.util.Locale;
 import java.util.ResourceBundle;
 
 /**
+ * An utility class to centralize {@link ResourceBundle} management. </br>
+ * The class is a {@code Singleton} with lazy initialization.
  * @author Gianluca Colaianni
  *
  */

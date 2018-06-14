@@ -4,7 +4,9 @@
 package com.lastminute.exercise.utility;
 
 /**
- * @author Gianluca Colaianni -- Fincons Group S.p.A.
+ * Utility class containing project constants.
+ * 
+ * @author Gianluca Colaianni
  *
  */
 public class Constants {
