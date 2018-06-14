@@ -4,7 +4,7 @@
 package com.lastminute.exercise.bean;
 
 import java.math.BigDecimal;
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 import lombok.Getter;
@@ -28,7 +28,8 @@ public class Cart {
      * 
      */
     public Cart() {
-	this(new HashMap<>(), BigDecimal.ZERO, BigDecimal.ZERO);
+	//LinkedHashMap to preserve items insertion ordering.
+	this(new LinkedHashMap<>(), BigDecimal.ZERO, BigDecimal.ZERO);
     }
 
     /**

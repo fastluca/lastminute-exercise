@@ -25,7 +25,7 @@ import javafx.stage.Stage;
 public final class StartApplication extends Application {
 
 
-    private static final String VIEW_NAME = "views/view.fxml";
+    private static final String VIEW_NAME = "views/main.fxml";
 
     @Override
     public void start(Stage stage) throws IOException {
@@ -43,10 +43,10 @@ public final class StartApplication extends Application {
 	FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource(VIEW_NAME), bundle);
 	loader.setControllerFactory(injector::getInstance);
 	
-	Parent root = FXMLLoader.load(getClass().getClassLoader().getResource(VIEW_NAME), bundle);
+	Parent root = loader.load();
 	
-	stage.setTitle(bundle.getString("application.title"));
-	stage.setScene(new Scene(root, 600, 400));
+	stage.setTitle(bundle.getString("label.application.title"));
+	stage.setScene(new Scene(root));
 	stage.setResizable(false);
 	stage.show();
 

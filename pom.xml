@@ -25,7 +25,7 @@
 				<version>8.8.3</version>
 				<configuration>
 					<vendor>Lastminute.com</vendor>
-					<mainClass>com.lastminute.exercise.Main</mainClass>
+					<mainClass>com.lastminute.exercise.StartApplication</mainClass>
 				</configuration>
 			</plugin>
 		</plugins>
