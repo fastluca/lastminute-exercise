@@ -128,5 +128,13 @@ public class CartServiceUnitTest {
 	assertThat(cart.getItems().get(chocolate.getId()).getTotal()).as("chocolate must have rith total").isEqualByComparingTo(new BigDecimal("11.85"));
 	assertThat(cart.getItems().get(chocolate.getId()).getTotalTaxes()).as("chocolate must have rith total taxes").isEqualByComparingTo(new BigDecimal("0.60"));
     }
+    
+    @Test
+    public void testRemoveItem() {
+	CartService service = injector.getInstance(CartService.class);
+	Cart cart = new Cart();
+	Product perfume = new Product("0001", "imported bottle of perfume", new BigDecimal("27.99"), ProductType.OTHERS, true);
+	cart = service.addItem(cart, perfume, BigInteger.ONE);
+    }
 
 }

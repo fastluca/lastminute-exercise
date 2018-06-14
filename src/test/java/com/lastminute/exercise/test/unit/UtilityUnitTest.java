@@ -28,11 +28,12 @@ public class UtilityUnitTest {
     
     @Test
     public void test() {
-	assertThat(Utility.format(BigDecimal.ONE, Constants.FORMAT_AMOUNT)).isEqualTo("1,00");
-	assertThat(Utility.format(new BigDecimal("10.3"), Constants.FORMAT_AMOUNT)).isEqualTo("10,30");
-	assertThat(Utility.format(new BigDecimal("10.31"), Constants.FORMAT_AMOUNT)).isEqualTo("10,31");
-	assertThat(Utility.format(new BigDecimal("10.311"), Constants.FORMAT_AMOUNT)).isEqualTo("10,31");
-	assertThat(Utility.format(new BigDecimal("10.316"), Constants.FORMAT_AMOUNT)).isEqualTo("10,32");
+	assertThat(Utility.format(BigDecimal.ONE, Constants.FORMAT_AMOUNT)).isEqualTo("1.00");
+	assertThat(Utility.format(new BigDecimal("10.3"), Constants.FORMAT_AMOUNT)).isEqualTo("10.30");
+	assertThat(Utility.format(new BigDecimal("10.31"), Constants.FORMAT_AMOUNT)).isEqualTo("10.31");
+	assertThat(Utility.format(new BigDecimal("10.311"), Constants.FORMAT_AMOUNT)).isEqualTo("10.31");
+	assertThat(Utility.format(new BigDecimal("10.316"), Constants.FORMAT_AMOUNT)).isEqualTo("10.32");
+	assertThat(Utility.format(new BigDecimal("100000.316"), Constants.FORMAT_AMOUNT)).isEqualTo("100000.32");
     }
 
 }
