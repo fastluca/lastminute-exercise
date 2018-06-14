@@ -4,6 +4,8 @@
 **Code Quality:** 
 [![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=com.lastminute%3Aexercise&metric=alert_status)](https://sonarcloud.io/api/project_badges/measure?project=com.lastminute%3Aexercise&metric=alert_status)   
 
+Exercise solution for technical interview.   
+
 Requirements
 ============
 * Maven 3.5 (older versions might work too)
@@ -13,8 +15,9 @@ Build Instruction
 ============
 To create your executable file, call `mvn jfx:jar`. The jar-file will be placed at `target/jfx/app`.  
 If you would create your executable and some installers (please see official oracle-documentation which applications are required for this), call `mvn jfx:native`. The native launchers or installers will be placed at `target/jfx/native`.  
-Others details about the build process are available at https://github.com/javafx-maven-plugin/javafx-maven-plugin.
+Others details about the build process are available at [javafx-maven-plugin project page](https://github.com/javafx-maven-plugin/javafx-maven-plugin).
 
 Run Tests
 ============
-To run tests, call `mvn test`.
+To run tests, call `mvn test`.   
+The class `CartServiceUnitTest.java` contains the three test cases provided in requirements.
