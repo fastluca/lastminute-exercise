@@ -1,13 +1,13 @@
 /**
  * 
  */
-package com.lastminute.exercise.test.unit;
+package com.lastminute.exercise.test.unit.controller;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.After;
+import org.junit.BeforeClass;
 import org.junit.Test;
-import org.testfx.api.FxRobotInterface;
 import org.testfx.api.FxToolkit;
 import org.testfx.framework.junit.ApplicationTest;
 
@@ -36,6 +36,25 @@ public class MainViewControllerUnitTest extends ApplicationTest {
 	release(new KeyCode[] {});
 	release(new MouseButton[] {});
     }
+    
+    @BeforeClass
+    public static void setupSpec() throws Exception {
+        if (Boolean.getBoolean("headless")) {
+            System.setProperty("testfx.robot", "glass");
+            System.setProperty("testfx.headless", "true");
+            System.setProperty("prism.order", "sw");
+            System.setProperty("prism.text", "t2k");
+            System.setProperty("java.awt.headless", "true");
+        }
+    }
+    
+//    @Override
+//    public PointQuery point(Node node) {
+//        Point2D topLeftPoint = node.localToScreen(0, 0);
+//        Point2D pos = new Point2D(topLeftPoint.getX(), topLeftPoint.getY());
+//
+//        return super.point(node).atOffset(pos);
+//    }
     
     @Test
     public void testInitialize() {

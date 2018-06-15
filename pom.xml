@@ -100,7 +100,7 @@
 			<version>4.0.13-alpha</version>
 			<scope>test</scope>
 		</dependency>
-		
+
 		<!-- Necessary to integrate TestFX with travis -->
 		<dependency>
 			<groupId>org.testfx</groupId>
@@ -108,7 +108,19 @@
 			<version>8u76-b04</version> <!-- jdk-9+181 for Java 9 -->
 			<scope>test</scope>
 		</dependency>
-
+		<dependency>
+			<groupId>pl.pojo</groupId>
+			<artifactId>pojo-tester</artifactId>
+			<version>0.7.6</version>
+			<type>pom</type>
+		</dependency>
 	</dependencies>
+
+	<repositories>
+		<repository>
+			<id>jcenter</id>
+			<url>http://jcenter.bintray.com/</url>
+		</repository>
+	</repositories>
 
 </project>

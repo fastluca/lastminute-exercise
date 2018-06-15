@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.lastminute.exercise.test.unit;
+package com.lastminute.exercise.test.unit.injection;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

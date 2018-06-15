@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.lastminute.exercise.test.unit;
+package com.lastminute.exercise.test.unit.service;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatNullPointerException;
