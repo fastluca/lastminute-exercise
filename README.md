@@ -1,7 +1,6 @@
 # lastminute-exercise
-**Continuous Integration:** [![Build Status](https://travis-ci.org/fastluca/lastminute-exercise.svg?branch=master)](https://travis-ci.org/fastluca/lastminute-exercise)   
-**Test coverage:** [![Coverage Status](https://sonarcloud.io/api/project_badges/measure?project=com.lastminute%3Aexercise&metric=coverage)](https://sonarcloud.io/api/project_badges/measure?project=com.lastminute%3Aexercise&metric=coverage)   
-**Code Quality:** 
+[![Build Status](https://travis-ci.org/fastluca/lastminute-exercise.svg?branch=master)](https://travis-ci.org/fastluca/lastminute-exercise) 
+[![Coverage Status](https://sonarcloud.io/api/project_badges/measure?project=com.lastminute%3Aexercise&metric=coverage)](https://sonarcloud.io/api/project_badges/measure?project=com.lastminute%3Aexercise&metric=coverage)  
 [![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=com.lastminute%3Aexercise&metric=alert_status)](https://sonarcloud.io/api/project_badges/measure?project=com.lastminute%3Aexercise&metric=alert_status)   
 
 Exercise solution for technical interview.   
