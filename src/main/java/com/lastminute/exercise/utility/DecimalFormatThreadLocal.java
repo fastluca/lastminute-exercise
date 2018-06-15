@@ -6,6 +6,7 @@ package com.lastminute.exercise.utility;
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 import java.util.Locale;
+import java.util.Objects;
 
 /**
  * It is a {@link ThreadLocal} management of {@link DecimalFormat} objects. </br>
@@ -22,6 +23,7 @@ public class DecimalFormatThreadLocal extends ThreadLocal<DecimalFormat> {
     private final DecimalFormatSymbols symbols;
 
     public DecimalFormatThreadLocal(final String pattern) {
+	Objects.requireNonNull(pattern, "Format pattern must be different from null.");
 	this.pattern = pattern;
 	this.symbols = new DecimalFormatSymbols(Locale.getDefault());
 	this.symbols.setDecimalSeparator('.');
