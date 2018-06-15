@@ -6,7 +6,10 @@ package com.lastminute.exercise.bean;
 import java.math.BigDecimal;
 
 import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
 /**
  * The model class for a Product object.
@@ -15,7 +18,10 @@ import lombok.Data;
  *
  */
 @AllArgsConstructor
-@Data
+@Getter
+@Setter
+@EqualsAndHashCode
+@ToString
 public class Product {
     
     /*
