@@ -7,8 +7,7 @@ import java.math.BigDecimal;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
 /**
  * The model class for a cart object.
@@ -16,8 +15,7 @@ import lombok.Setter;
  * @author Gianluca Colaianni
  *
  */
-@Getter
-@Setter
+@Data
 public class Cart {
     
    /*

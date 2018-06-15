@@ -6,8 +6,7 @@ package com.lastminute.exercise.bean;
 import java.math.BigDecimal;
 
 import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
 /**
  * The model class for a Product object.
@@ -15,9 +14,8 @@ import lombok.Setter;
  * @author Gianluca Colaianni
  *
  */
-@Getter
-@Setter
 @AllArgsConstructor
+@Data
 public class Product {
     
     /*

@@ -6,8 +6,7 @@ package com.lastminute.exercise.bean;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
 /**
  * The model class for a cart item object.
@@ -15,8 +14,7 @@ import lombok.Setter;
  * @author Gianluca Colaianni
  *
  */
-@Getter
-@Setter
+@Data
 public class CartItem {
 
     /*
