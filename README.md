@@ -4,7 +4,8 @@
 [![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=com.lastminute%3Aexercise&metric=alert_status)](https://sonarcloud.io/api/project_badges/measure?project=com.lastminute%3Aexercise&metric=alert_status)   
 
 Exercise solution for technical interview.   
-
+The project is configured to use Travis CI as build service and SonarCloud as code quality and code test coverage analyzer.
+ 
 Requirements
 ============
 * Maven 3.5 (older versions might work too)
