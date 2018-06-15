@@ -50,8 +50,8 @@ public class MainViewController implements Initializable {
     /*
      * Pattern that matches a valid amount.
      */
-    private static final Pattern PATTERN_AMOUNT = Pattern.compile("^\\d*(.\\d{0,2})?$");
-
+    private static final Pattern PATTERN_AMOUNT = Pattern.compile("[0-9]*([.][0-9]{0,2})?");
+	    
     /*
      * Pattern that matches a valid integer.
      */
