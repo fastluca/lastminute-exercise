@@ -6,6 +6,7 @@ package com.lastminute.exercise.test.unit;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.After;
+import org.junit.BeforeClass;
 import org.junit.Test;
 import org.testfx.api.FxToolkit;
 import org.testfx.framework.junit.ApplicationTest;
@@ -28,7 +29,7 @@ public class MainViewControllerUnitTest extends ApplicationTest {
 	StartApplication app = new StartApplication();
 	app.start(stage);
     }
-
+    
     @After
     public void tearDown() throws Exception {
 	FxToolkit.hideStage();
@@ -48,6 +49,48 @@ public class MainViewControllerUnitTest extends ApplicationTest {
 	assertThat(lookup("#productTypeComboBox").queryComboBox().getSelectionModel().getSelectedItem()).isNotNull();
 	
 	assertThat(lookup("#productImportedCheckBox").queryAs(CheckBox.class).isSelected()).isFalse();
+    }
+    
+    @Test
+    public void testInputFieldValidation() {
+	lookup("#productQuantityTextField").queryTextInputControl().setText("a");
+	assertThat(lookup("#productQuantityTextField").queryTextInputControl().getText()).isEmpty();
+	
+	lookup("#productQuantityTextField").queryTextInputControl().setText("10");
+	assertThat(lookup("#productQuantityTextField").queryTextInputControl().getText()).isEqualTo("10");
+	
+	lookup("#productQuantityTextField").queryTextInputControl().setText("10.");
+	assertThat(lookup("#productQuantityTextField").queryTextInputControl().getText()).isEqualTo("10");
+	
+	lookup("#productAmountTextField").queryTextInputControl().setText("a");
+	assertThat(lookup("#productAmountTextField").queryTextInputControl().getText()).isEmpty();
+	
+	lookup("#productAmountTextField").queryTextInputControl().setText("10");
+	assertThat(lookup("#productAmountTextField").queryTextInputControl().getText()).isEqualTo("10");
+	
+	lookup("#productAmountTextField").queryTextInputControl().setText("10.25");
+	assertThat(lookup("#productAmountTextField").queryTextInputControl().getText()).isEqualTo("10.25");
+    }
+    
+    @Test
+    public void testAddProductButton() {
+	lookup("#productQuantityTextField").queryTextInputControl().setText("10");
+	assertThat(lookup("#addProductButton").queryButton().isDisable()).isTrue();
+	
+	lookup("#productAmountTextField").queryTextInputControl().setText("10.25");
+	assertThat(lookup("#addProductButton").queryButton().isDisable()).isTrue();
+	
+	lookup("#productIdTextField").queryTextInputControl().setText("test");
+	assertThat(lookup("#addProductButton").queryButton().isDisable()).isFalse();
+    }
+    
+    @Test
+    public void testRemoveItemButton() {
+	lookup("#productQuantityTextField").queryTextInputControl().setText("10");
+	assertThat(lookup("#removeItemButton").queryButton().isDisable()).isTrue();
+	
+	lookup("#productIdTextField").queryTextInputControl().setText("test");
+	assertThat(lookup("#removeItemButton").queryButton().isDisable()).isFalse();
     }
 
 }
