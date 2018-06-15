@@ -6,8 +6,8 @@ package com.lastminute.exercise.test.unit;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.After;
-import org.junit.BeforeClass;
 import org.junit.Test;
+import org.testfx.api.FxRobotInterface;
 import org.testfx.api.FxToolkit;
 import org.testfx.framework.junit.ApplicationTest;
 
@@ -82,6 +82,11 @@ public class MainViewControllerUnitTest extends ApplicationTest {
 	
 	lookup("#productIdTextField").queryTextInputControl().setText("test");
 	assertThat(lookup("#addProductButton").queryButton().isDisable()).isFalse();
+	
+	assertThat(clickOn("#addProductButton").lookup("#cartTableView").queryTableView().getItems().size()).isEqualTo(1);
+	assertThat(lookup("#productQuantityTextField").queryTextInputControl().getText()).isEmpty();
+	assertThat(lookup("#cartSalesTaxesLabel").queryLabeled().getText()).isNotEmpty();
+	assertThat(lookup("#cartTotalLabel").queryLabeled().getText()).isNotEmpty();
     }
     
     @Test
@@ -91,6 +96,23 @@ public class MainViewControllerUnitTest extends ApplicationTest {
 	
 	lookup("#productIdTextField").queryTextInputControl().setText("test");
 	assertThat(lookup("#removeItemButton").queryButton().isDisable()).isFalse();
+    }
+    
+    @Test
+    public void testClearProductButton() {
+	lookup("#productQuantityTextField").queryTextInputControl().setText("10");
+	lookup("#productAmountTextField").queryTextInputControl().setText("10.25");
+	lookup("#productIdTextField").queryTextInputControl().setText("test");
+	lookup("#productNameTextField").queryTextInputControl().setText("test");
+	lookup("#productImportedCheckBox").queryAs(CheckBox.class).setSelected(true);
+	
+	clickOn("#clearProductButton");
+	
+	assertThat(lookup("#productQuantityTextField").queryTextInputControl().getText()).isEmpty();
+	assertThat(lookup("#productAmountTextField").queryTextInputControl().getText()).isEmpty();
+	assertThat(lookup("#productIdTextField").queryTextInputControl().getText()).isEmpty();
+	assertThat(lookup("#productNameTextField").queryTextInputControl().getText()).isEmpty();
+	assertThat(lookup("#productImportedCheckBox").queryAs(CheckBox.class).isSelected()).isFalse();
     }
 
 }
