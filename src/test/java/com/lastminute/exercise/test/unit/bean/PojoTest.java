@@ -14,7 +14,7 @@ import com.lastminute.exercise.bean.Product;
 import pl.pojo.tester.api.assertion.Method;
 
 /**
- * @author Gianluca Colaianni -- Fincons Group S.p.A.
+ * @author Gianluca Colaianni
  *
  */
 public class PojoTest {
